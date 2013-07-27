@@ -26,8 +26,8 @@ body {
   background:url(sprite.png) 120px 120px no-repeat;
   position:absolute;
   }
-.spot-baker { background-position:-130px 0px; }
-.spot-aldgate { background-position:-260px 0px; }
+.spot-philcoa { background-position:-130px 0px; }
+.spot-cal { background-position:-260px 0px; }
 .spot-london-bridge { background-position:-390px 0px; }
 .spot-woolwich { background-position:-520px 0px; }
 .spot-gloucester { background-position:-650px 0px; }
@@ -42,22 +42,10 @@ body {
 
 <script>
 var geojson = [
-  { "geometry": { "type": "Point", "coordinates": [-0.15591514, 51.51830379] },
-    "properties": { "id": "baker" } },
-  { "geometry": { "type": "Point", "coordinates": [-0.07571203, 51.51424049] },
-    "properties": { "id": "aldgate" } },
-  { "geometry": { "type": "Point", "coordinates": [-0.08533793, 51.50438536] },
-    "properties": { "id": "london-bridge" } },
-  { "geometry": { "type": "Point", "coordinates": [0.05991101, 51.48752939] },
-    "properties": { "id": "woolwich" } },
-  { "geometry": { "type": "Point", "coordinates": [-0.18335806, 51.49439521] },
-    "properties": { "id": "gloucester" } },
-  { "geometry": { "type": "Point", "coordinates": [-0.19684993, 51.5033856] },
-    "properties": { "id": "caulfield-gardens" } },
-  { "geometry": { "type": "Point", "coordinates": [-0.10669358, 51.51433123] },
-    "properties": { "id": "telegraph" } },
-  { "geometry": { "type": "Point", "coordinates": [-0.12416858, 51.50779757] },
-    "properties": { "id": "charing-cross" } }
+  { "geometry": { "type": "Point", "coordinates": [  121.0531997680664,14.653658666757186] },
+    "properties": { "id": "philcoa" } },
+  { "geometry": { "type": "Point", "coordinates": [  121.06741011142731,14.652558399284867] },
+    "properties": { "id": "cal" } },
 ];
 var tiles = mapbox.layer().tilejson({
   tiles: [ "http://a.tiles.mapbox.com/v3/examples.map-liczq28b/{z}/{x}/{y}.png" ]
@@ -77,7 +65,7 @@ var map = mapbox
   // Creates the map with tile and spots layers.
   .map('map', [tiles, spots])
   // Sets the initial map view to 0.1296E, 51.5011N @ Z14.
-  .centerzoom({ lon:-0.1296, lat:51.5011 }, 14);
+  .centerzoom({ lon:121.0531997680664, lat:14.653658666757186 }, 16);
 </script>
 
 </body>
